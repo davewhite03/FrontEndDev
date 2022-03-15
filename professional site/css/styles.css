@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Montserrat";
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+text-align: center;
+display: grid;
+grid-template-areas:
+"a a a"
+"b b b"
+"c c c";
+}
+
+footer{
+  grid-area:c;
+  height:100%;
+  width: 100%;
+  background-color: black;
+}
+h1{
+  color: white;
+  opacity:.7;
+  margin-top: 5rem;
+}
+h2{
+  color: white;
+  opacity: .7;
+}
+
+nav{ display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  opacity: 0.5;
+  background-color: black;
+  color:white;
+  height: 2rem;
+  grid-area:a;
+}
+
+nav ul{
+  list-style-type:  none;
+}
+nav ul li {float: left;
+
+
+}
+nav ul li a{ padding: 2rem 1rem .5rem 1rem;
+text-decoration: none;
+color: white;
+}
+
+nav ul li  a:hover {
+  color:black;
+  background-color: white;
+
+}
+
+.bodyContent{
+  grid-area: b;
+}
+.resumePort{
+  margin-top: 5rem;
+
+}
+.btn:hover{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+.btn{
+font-family: "Montserrat";
+  opacity: .7;
+  padding: 1.5% 3%;
+  font-size: 1.5rem;
+  border: .5rem solid white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+ color: white;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 1);
+}
+
+.btn-resume{
+  margin-left: 1rem;
+}
+  .btn-portfolio{
+    margin-right: 1rem;
+  }
+.portfolio{
+
+height: 30%;
+width: 30%;
+
+
+position: relative;
+margin: 0 auto 0 auto;
+top: 20%;
+border-radius: 2rem;
+display:none;
+background: rgba(255, 255, 255, 0.7);
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 1);
+
+}
+.resume{
+
+  height: 30%;
+  width: 30%;
+  
+  
+  position: relative;
+  margin: 0 auto 0 auto;
+  top: 20%;
+  border-radius: 2rem;
+  display:none;
+  background: rgba(255, 255, 255, 0.7);
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 1);
+  
+  }
+
+
+.port-img{
+  background-image: url('../images/portfolio.png');
+  background-size: cover;
+background-color:#DC33FF;
+height: 4rem;
+width: 4rem;
+border: .5rem solid purple;
+border-radius:25rem;
+margin:0 0 10% 10%;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 1);
+
+}
+.port-img:hover{
+  background-color: purple;
+  border: .5rem solid #DC33FF;
+}
+.btn-close{
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.5rem;
+  border: .2rem solid black;
+  border-radius: 1rem;
+  background: rgba(0 ,0 ,0, 0.5);
+  color: white;
+
+  margin-left: 80%;
+  opacity: 0.7;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 1);
+}
+.btn-close:hover{
+background: rgba(0 ,0,255, 0.5);
+border: .2rem solid gray;
+}
+
+.movement{
+
+  animation:left-right 700ms ease-in ;
+
+
+}
+
+.movement2{
+
+  animation:right-left 300ms ease-in ;
+
+
+}
+.port-button{
+  background-image: url('images/portfolio.png');
+}
+
+
+
+
+
+@keyframes left-right {
+  0%{
+    transform: skewX(53deg) translateX(-500px);
+    opacity: 0;
+  }
+
+  60%{
+    transform: translateX(0px);
+
+  }
+
+
+  70%{
+    transform: skew(-20deg);
+    opacity: 1;
+  }
+
+80%{
+  transform: skew(0deg) translate(0);
+}
+
+
+100%{
+  transform: skewX(0deg);
+}
+}
+
+
+
+@keyframes right-left {
+  0%{
+    transform: skewX(-53deg) translateX(200px);
+    opacity: 0;
+  }
+
+  60%{
+    transform: translateX(0px);
+
+  }
+  62%{
+    transform: skewX(0deg) translateX(-30px);
+  }
+  70%{
+    transform: skew(20deg);
+    opacity: 1;
+  }
+
+80%{
+  transform: skew(0deg) translate(0);
+}
+
+90%{
+ transform: skew(5deg);
+}
+100%{
+  transform: skewX(0deg);
+}
+}
